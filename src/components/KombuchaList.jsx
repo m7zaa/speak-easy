@@ -71,63 +71,63 @@ var MasterKombuchaList = [
     price: '3',
     flavor: 'kiwi lime',
     quantity: '128'
-},
-{
+  },
+  {
     name: 'Double Bliss',
     brand: 'Sapphire Brewers',
     price: '3',
     flavor: 'strawberry pineapple',
     quantity: '106'
 
-},
-{
+  },
+  {
     name: 'Silent Love',
     brand: 'Sapphire Brewers',
     price: '6',
     flavor: 'strawberry rose mint',
     quantity: '29'
 
-},
-{
+  },
+  {
     name: 'Ambush',
     brand: 'Sapphire Brewers',
     price: '3',
     flavor: 'ginger tumeric black-pepper',
     quantity: '114'
 
-},
-{
+  },
+  {
     name: 'Delinquent',
     brand: 'Triumph Fermenters',
     price: '3',
     flavor: 'blueberry basil',
     quantity: '40'
 
-},
-{
+  },
+  {
     name: 'River of Fury',
     brand: 'Triumph Fermenters',
     price: '5',
     flavor: 'boysenberry',
     quantity: '4'
 
-},
-{
+  },
+  {
     name: 'The Savage Five',
     brand: 'Triumph Fermenters',
     price: '2',
     flavor: 'hibiscus mango orange rosehips mint',
     quantity: '118'
 
-},
-{
+  },
+  {
     name: 'Happy Trio',
     brand: 'Triumph Fermenters',
     price: '5',
     flavor: 'cranberry orange lime',
     quantity: '42'
 
-},
+  },
 
 ];
 

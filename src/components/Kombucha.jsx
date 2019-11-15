@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import box from "../Assets/Img/box.jpg";
 
 function Kombucha(props) {
   var pageStyle = {
@@ -11,7 +12,9 @@ function Kombucha(props) {
   };
   var menuStyle = {
     margin: '0 auto 0 auto',
-    backgroundColor: 'brown'
+    backgroundColor: '#02300f',
+    //   backgroundImage: `url(${box})`
+    color: 'white'
   };
   var itemStyle = {
     width: '250px',
@@ -26,9 +29,7 @@ function Kombucha(props) {
     bottom: '8',
     left: '20',
     right: '20'
-  }
-
-
+  };
   var discountStyle = {
     color: 'maroon',
     fontWeight: 'bold'
@@ -41,11 +42,7 @@ function Kombucha(props) {
   var topShelfStyle = {
     color: 'navy',
     fontWeight: 'bold'
-
   };
-
-
-
 
   return (
     <div style={pageStyle}>
@@ -53,23 +50,23 @@ function Kombucha(props) {
         <div style={itemStyle} className="flex-item">
           <h3>{props.name}</h3>
           <h6><strong>{props.brand}</strong></h6>
-            <p><em>{props.flavor}</em></p>
+          <p><em>{props.flavor}</em></p>
 
-            <div style={itemFooterTextStyle}>
-                {props.price <= 2 &&
-                    <p style={discountStyle}>${props.price}</p>
-                }
-                {props.price > 2 && props.price <= 4 &&
-                    <p style={midShelfStyle}>${props.price}</p>
-                }
-                {props.price > 4 &&
-                    <p style={topShelfStyle}>${props.price}</p>
-                }
+          <div style={itemFooterTextStyle}>
+            {props.price <= 2 &&
+            <p style={discountStyle}>${props.price}</p>
+            }
+            {props.price > 2 && props.price <= 4 &&
+            <p style={midShelfStyle}>${props.price}</p>
+            }
+            {props.price > 4 &&
+            <p style={topShelfStyle}>${props.price}</p>
+            }
 
-                <p>{props.quantity} pints available</p>
-                <hr />
-                <Link to="/editkombuchaform">Edit</Link>
-            </div>
+            <p>{props.quantity} pints available</p>
+            <hr />
+            <Link to="/editkombuchaform">Edit</Link>
+          </div>
         </div>
       </div>
     </div>
