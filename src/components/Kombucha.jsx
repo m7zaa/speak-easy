@@ -29,11 +29,19 @@ function Kombucha(props) {
   }
 
 
-  var cheapStyle = {
-    color: 'red',
+  var discountStyle = {
+    color: 'maroon',
+    fontWeight: 'bold'
+  };
+  var midShelfStyle = {
+    color: 'gold',
+    fontWeight: 'bold'
+
   };
   var topShelfStyle = {
-    color: 'blue',
+    color: 'navy',
+    fontWeight: 'bold'
+
   };
 
 
@@ -48,10 +56,13 @@ function Kombucha(props) {
             <p><em>{props.flavor}</em></p>
 
             <div style={itemFooterTextStyle}>
-                {props.price <= 3 &&
-                    <p style={cheapStyle}>${props.price}</p>
+                {props.price <= 2 &&
+                    <p style={discountStyle}>${props.price}</p>
                 }
-                {props.price > 3 &&
+                {props.price > 2 && props.price <= 4 &&
+                    <p style={midShelfStyle}>${props.price}</p>
+                }
+                {props.price > 4 &&
                     <p style={topShelfStyle}>${props.price}</p>
                 }
 

@@ -12,7 +12,7 @@ var MasterKombuchaList = [
   {
     name: 'Rose of Summer',
     brand: 'Rainbow Obsidian Co.',
-    price: '6',
+    price: '2',
     flavor: 'strawberry ginger',
     quantity: '99'
 
@@ -60,7 +60,7 @@ var MasterKombuchaList = [
   {
     name: 'Lucky Star',
     brand: 'Thunderbird',
-    price: '5',
+    price: '2',
     flavor: 'starfruit lime',
     quantity: '22'
 
@@ -83,7 +83,7 @@ var MasterKombuchaList = [
 {
     name: 'Silent Love',
     brand: 'Sapphire Brewers',
-    price: '3',
+    price: '6',
     flavor: 'strawberry rose mint',
     quantity: '29'
 
