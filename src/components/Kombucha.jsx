@@ -15,13 +15,19 @@ function Kombucha(props) {
   };
   var itemStyle = {
     width: '250px',
-    height: '300px',
+    height: '280px',
     textAlign: 'center',
     padding: '15',
+    position: 'relative'
   };
-  var itemFooterStyle = {
-      verticalAlign: 'bottom'
+
+  var itemFooterTextStyle = {
+    position: 'absolute',
+    bottom: '8',
+    left: '20',
+    right: '20'
   }
+
 
   var cheapStyle = {
     color: 'red',
@@ -41,18 +47,18 @@ function Kombucha(props) {
           <h6><strong>{props.brand}</strong></h6>
             <p><em>{props.flavor}</em></p>
 
-          {props.price <= 3 &&
-              <p style={cheapStyle}>${props.price}</p>
-          }
-          {props.price > 3 &&
-              <p style={topShelfStyle}>${props.price}</p>
-          }
+            <div style={itemFooterTextStyle}>
+                {props.price <= 3 &&
+                    <p style={cheapStyle}>${props.price}</p>
+                }
+                {props.price > 3 &&
+                    <p style={topShelfStyle}>${props.price}</p>
+                }
 
-          <p>{props.quantity} pints available</p>
-          <div style={itemFooterStyle}>
-            <hr />
-            <Link to="/editkombuchaform">Edit</Link>
-          </div>
+                <p>{props.quantity} pints available</p>
+                <hr />
+                <Link to="/editkombuchaform">Edit</Link>
+            </div>
         </div>
       </div>
     </div>
