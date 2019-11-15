@@ -44,7 +44,7 @@ var MasterKombuchaList = [
   {
     name: 'Red Dragon',
     brand: 'Soma',
-    price: '3',
+    price: '5',
     flavor: 'boysenberry',
     quantity: '84'
 
@@ -52,7 +52,7 @@ var MasterKombuchaList = [
   {
     name: 'Red Dragon',
     brand: 'Soma',
-    price: '3',
+    price: '2',
     flavor: 'boysenberry',
     quantity: '84'
 
@@ -60,7 +60,7 @@ var MasterKombuchaList = [
   {
     name: 'Red Dragon',
     brand: 'Soma',
-    price: '3',
+    price: '5',
     flavor: 'boysenberry',
     quantity: '84'
 

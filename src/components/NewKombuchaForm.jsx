@@ -20,6 +20,10 @@ function NewKombuchaForm() {
           type='text'
           id='flavor'
           placeholder='Flavor' />
+        <input
+          type='text'
+          id='quantity'
+          placeholder='Quantity' />
                 
         <button type='submit'>Add Kombucha</button>
       </form>

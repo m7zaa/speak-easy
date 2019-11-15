@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Kombucha(props) {
-
   var pageStyle = {
     display: 'inline-flex',
     alignItems: 'center',
@@ -20,6 +19,12 @@ function Kombucha(props) {
     textAlign: 'center',
     padding: '15',
   };
+  var cheapStyle = {
+    color: 'red',
+  };
+  var topShelfStyle = {
+    color: 'blue',
+  };
 
 
 
@@ -30,7 +35,14 @@ function Kombucha(props) {
         <div style={itemStyle} className="flex-item">
           <h3>{props.name}</h3>
           <h6>{props.brand}</h6>
-          <p>${props.price}</p>
+
+          {props.price <= 3 &&
+              <p style={cheapStyle}>${props.price}</p>
+          }
+          {props.price > 3 &&
+              <p style={topShelfStyle}>${props.price}</p>
+          }
+
           <p>flavor: {props.flavor}</p>
           <p>capcacity: {props.quantity} pints</p>
           <hr />
