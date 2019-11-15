@@ -30,6 +30,11 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 
 
+![Diagram](https://github.com/m7zaa/speak-easy/blob/16d6c46744d7125aba427e33543c89434fa56c42/speak-easy.jpg)
+
+
+
+
 ## Known Bugs
 
 _{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
