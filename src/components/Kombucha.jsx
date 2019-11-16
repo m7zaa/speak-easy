@@ -1,27 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import box from "../Assets/Img/box.jpg";
+// import box from '../Assets/Img/box.jpg';
 
 function Kombucha(props) {
   var pageStyle = {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '1% 1%',
+    marginLeft: '40',
+    marginRight: '10',
+    marginBottom: '10'
+
   };
   var menuStyle = {
-    margin: '0 auto 0 auto',
+    // margin: '5 5 5 5',
     backgroundColor: '#02300f',
     //   backgroundImage: `url(${box})`
-    color: 'white'
+    color: 'white',
   };
+  var almostOutStyle = {
+      backgroundColor = 'White'
+  }
   var itemStyle = {
-    width: '250px',
-    height: '280px',
+    width: '300px',
+    height: '300px',
     textAlign: 'center',
     padding: '15',
-    position: 'relative'
+    position: 'relative',
+    fontFamily: 'Century Gothic',
   };
 
   var itemFooterTextStyle = {
@@ -47,27 +54,34 @@ function Kombucha(props) {
   return (
     <div style={pageStyle}>
       <div style={menuStyle} className="card">
-        <div style={itemStyle} className="flex-item">
-          <h3>{props.name}</h3>
-          <h6><strong>{props.brand}</strong></h6>
-          <p><em>{props.flavor}</em></p>
+          {props.quantity < 20 &&
+          <div style={almostOutStyle}>
 
-          <div style={itemFooterTextStyle}>
-            {props.price <= 2 &&
-            <p style={discountStyle}>${props.price}</p>
-            }
-            {props.price > 2 && props.price <= 4 &&
-            <p style={midShelfStyle}>${props.price}</p>
-            }
-            {props.price > 4 &&
-            <p style={topShelfStyle}>${props.price}</p>
-            }
+            <div style={itemStyle}>
+            <h3>{props.name}</h3>
+            <h6><strong>{props.brand}</strong></h6>
+            <p><em>{props.flavor}</em></p>
 
-            <p>{props.quantity} pints available</p>
-            <hr />
-            <Link to="/editkombuchaform">Edit</Link>
+            <div style={itemFooterTextStyle}>
+                {props.price <= 2 &&
+                <p style={discountStyle}>${props.price}</p>
+                }
+                {props.price > 2 && props.price <= 4 &&
+                <p style={midShelfStyle}>${props.price}</p>
+                }
+                {props.price > 4 &&
+                <p style={topShelfStyle}>${props.price}</p>
+                }
+                
+                <p>{props.quantity} pints available</p>
+                <p><Link to="/">Sell</Link></p>
+                <hr />
+                <Link to="/editkombuchaform">Edit</Link>
+            </div>
+            </div>
+
           </div>
-        </div>
+          }
       </div>
     </div>
   );

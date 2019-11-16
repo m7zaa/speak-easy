@@ -20,7 +20,7 @@ function NavBar() {
   return (
     <nav style= {navBarWidth} className="navbar navbar-expand-lg navbar-light bg-white box-shadow mb-3">
       <div className="container">
-        <a className="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" href="\">Speak Easy</a>
+        <a className="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" href="\">The Speak Easy</a>
 
                     
         <div className="navbar-collapse collapse d-lg-inline-flex flex-lg-row">

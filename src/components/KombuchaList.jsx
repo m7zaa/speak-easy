@@ -131,11 +131,18 @@ var MasterKombuchaList = [
 
 ];
 
-
 function KombuchaList() {
+    var headerStyle = {
+        textAlign: 'center',
+        position: 'relative',
+        fontFamily: 'Century Gothic',
+        fontWeight: 'bold',
+        fontSize: '100'
+    };
 
   return (
     <div>
+      <h1 style={headerStyle}>Drafts</h1>
       <hr />
       {MasterKombuchaList.map((kombucha, index) =>
         <Kombucha name={kombucha.name}

@@ -73,7 +73,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'template.ejs',
             appMountId: 'react-app-root',
-            title: 'Kombucha Speak Easy',
+            title: 'The Speak Easy',
             filename: resolve(__dirname, "build", "index.html"),
         }),
     ]

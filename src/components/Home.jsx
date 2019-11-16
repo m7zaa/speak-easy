@@ -22,14 +22,21 @@ function Home() {
     position: 'absolute',
     left: '28%',
     right: '25%',
-    top: '50%',
+    top: '35%',
     bottom: '25%',
-    textShadow: '2px 2px white',
-    fontFamily: 'Courier, monospace'
-  };
+    fontFamily: '"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans - serif',
+    fontSize: '92px',
+    padding: '80px 50px',
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    textRendering: 'optimizeLegibility',
+    color: '#2c2c2c',
+    letterSpacing: '.05em',
+    textShadow: '4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2)'
+    };
   return (
     <div style={siteStyle} className="container">
-      <h1 style={titleStyle}>Welcome to the Speak Easy</h1>
+      <h1 style={titleStyle}>The Speak Easy</h1>
       <img style={imgStyle} src={background}></img>
       <Link to="/Add">Add Kombucha</Link>
     </div>
