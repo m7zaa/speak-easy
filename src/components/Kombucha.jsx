@@ -61,7 +61,7 @@ function Kombucha(props) {
             <div style={almostOutStyle}>
                 <div style={itemStyle}>
                 <h3>{props.name}</h3>
-                <h6><strong>{props.brand}</strong></h6>
+                <h6><strong>by {props.brand}</strong></h6>
                 <p><em>{props.flavor}</em></p>
                 <div style={itemFooterTextStyle}>
                     {props.price <= 2 &&

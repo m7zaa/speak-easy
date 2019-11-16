@@ -1,5 +1,7 @@
 import React from 'react';
 import Kombucha from './Kombucha';
+import { Link } from 'react-router-dom';
+
 
 var MasterKombuchaList = [
   {
@@ -153,6 +155,7 @@ function KombuchaList() {
           quantity={kombucha.quantity}
           key={index} />
       )}
+        <Link to="/Add">Add Kombucha</Link>
     </div>
   );
 }
