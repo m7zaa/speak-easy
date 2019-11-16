@@ -137,7 +137,8 @@ function KombuchaList() {
         position: 'relative',
         fontFamily: 'Century Gothic',
         fontWeight: 'bold',
-        fontSize: '100'
+        fontSize: '100',
+        color: 'white'
     };
 
   return (
