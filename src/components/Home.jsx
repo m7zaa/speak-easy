@@ -29,7 +29,7 @@ function Home() {
     position: 'fixed',
     textAlign: 'center',
     borderStyle: 'solid',
-    borderColor: 'white'
+    borderColor: '#ececeb'
   };
   return (
     <div style={siteStyle} className="container">

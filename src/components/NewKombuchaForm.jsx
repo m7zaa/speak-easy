@@ -19,36 +19,37 @@ function NewKombuchaForm(props) {
     _flavor.value = '';
   }
   var formStyle = {
-    color: 'white'
+    color: '#ececeb'
   };
   var btnStyle = {
-    color: 'black'
+    color: '#ececeb',
+    backgroundColor: '#e25822'
   };
   return (
     <div style={formStyle}>
       <form onSubmit={handleNewKombuchaFormSubmission}>
         <input
-          style={{ color: 'white' }}
+          style={{ color: '#ececeb' }}
           // type='text'
           id='name'
           placeholder='Name'
           ref={(input) => { _name = input; }} />
         <input
-          style={{ color: 'white' }}
+          style={{ color: '#ececeb' }}
           // type='text'
           id='brand'
           placeholder='Brand'
           ref={(input) => { _brand = input; }} />
  
         <input
-          style={{ color: 'white' }}
+          style={{ color: '#ececeb' }}
           // type='text'
           id='Price'
           placeholder='Price'
           ref={(input) => { _price = input; }} />
 
         <input
-          style={{ color: 'white' }}
+          style={{ color: '#ececeb' }}
 
           // type='text'
           id='flavor'
@@ -56,7 +57,7 @@ function NewKombuchaForm(props) {
           ref={(input) => { _flavor = input; }} />
 
 
-        <button type='submit' style={btnStyle} className="waves-effect waves-light btn-small">Add</button>    
+        <button type='submit' style={btnStyle} className="waves-effect  btn-small">Add</button>    
       </form>
     </div>
   );

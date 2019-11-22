@@ -7,12 +7,13 @@ function NavBar() {
   var navStyle = {
     paddingLeft: '2%',
     paddingRight: '2%',
-    backgroundColor: 'black',
+    backgroundColor: '#10316b',
     fontFamily: 'Tomorrow, sans-serif',
     fontWeight: 'bold',
     borderRadius: '5px',
     width: '100%',
-    marginBottom: '30px'
+    marginBottom: '30px',
+    color: '#ececeb'
   };
 
   var bottleStyle = {
@@ -24,7 +25,7 @@ function NavBar() {
       <div className="nav-wrapper">
         <span><Link to="/"><img src={bottle} style={bottleStyle}/></Link></span>
         <ul id="nav-mobile" className="right">
-          <li><Link to="/Kombucha">Drafts</Link></li>
+          <li><Link to="/Kombucha">On Tap</Link></li>
         </ul>
       </div>
     </nav>
