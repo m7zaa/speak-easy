@@ -33,7 +33,7 @@ function Home() {
     color: '#2c2c2c',
     letterSpacing: '.05em',
     textShadow: '4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2)'
-    };
+  };
   return (
     <div style={siteStyle} className="container">
       <h1 style={titleStyle}>The Speak Easy</h1>

@@ -12,7 +12,7 @@ function App() {
     backgroundColor: 'black',
   };
   return (
-      <div style={siteStyle} className="container">
+    <div style={siteStyle} className="container">
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />

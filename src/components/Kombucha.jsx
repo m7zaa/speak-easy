@@ -15,16 +15,16 @@ function Kombucha(props) {
   };
   var menuStyle = {
     // margin: '5 5 5 5',
-      backgroundColor: '#1D0846',
+    backgroundColor: '#1D0846',
     //   backgroundImage: `url(${box})`
     color: 'white',
     borderStyle: 'solid',
     borderWidth: '5px'
   };
   var almostOutStyle = {
-      backgroundColor: 'White',
-      color: 'black'
-  }
+    backgroundColor: 'White',
+    color: 'black'
+  };
   var itemStyle = {
     width: '300px',
     height: '300px',
@@ -57,56 +57,56 @@ function Kombucha(props) {
   return (
     <div style={pageStyle}>
       <div style={menuStyle} className="card">
-          {props.quantity < 20 &&
-            <div style={almostOutStyle}>
-                <div style={itemStyle}>
-                <h3>{props.name}</h3>
-                <h6><strong>by {props.brand}</strong></h6>
-                <p><em>{props.flavor}</em></p>
-                <div style={itemFooterTextStyle}>
-                    {props.price <= 2 &&
-                    <p style={discountStyle}>${props.price}</p>
-                    }
-                    {props.price > 2 && props.price <= 4 &&
-                    <p style={midShelfStyle}>${props.price}</p>
-                    }
-                    {props.price > 4 &&
-                    <p style={topShelfStyle}>${props.price}</p>
-                    }
-                    <p>{props.quantity} pints available</p>
-                    <p><Link to="/">Sell</Link></p>
-                    <hr />
-                    <Link to="/editkombuchaform">Edit</Link>
-                </div>
-                </div>
-            </div>
-          }
-              {props.quantity >= 20 &&
-                  <div style={menuStyle}>
-                      <div style={itemStyle}>
-                          <h3>{props.name}</h3>
-                          <h6><strong>by {props.brand}</strong></h6>
-                          <p><em>{props.flavor}</em></p>
-                          <div style={itemFooterTextStyle}>
-                              {props.price <= 2 &&
-                                  <p style={discountStyle}>${props.price}</p>
-                              }
-                              {props.price > 2 && props.price <= 4 &&
-                                  <p style={midShelfStyle}>${props.price}</p>
-                              }
-                              {props.price > 4 &&
-                                  <p style={topShelfStyle}>${props.price}</p>
-                              }
-
-                              <p>{props.quantity} pints available</p>
-                              <p><Link to="/">Sell</Link></p>
-                              <hr />
-                              <Link to="/editkombuchaform">Edit</Link>
-                          </div>
-                      </div>
-
-                  </div>
+        {props.quantity < 20 &&
+        <div style={almostOutStyle}>
+          <div style={itemStyle}>
+            <h3>{props.name}</h3>
+            <h6><strong>by {props.brand}</strong></h6>
+            <p><em>{props.flavor}</em></p>
+            <div style={itemFooterTextStyle}>
+              {props.price <= 2 &&
+              <p style={discountStyle}>${props.price}</p>
               }
+              {props.price > 2 && props.price <= 4 &&
+              <p style={midShelfStyle}>${props.price}</p>
+              }
+              {props.price > 4 &&
+              <p style={topShelfStyle}>${props.price}</p>
+              }
+              <p>{props.quantity} pints available</p>
+              <p><Link to="/">Sell</Link></p>
+              <hr />
+              <Link to="/editkombuchaform">Edit</Link>
+            </div>
+          </div>
+        </div>
+        }
+        {props.quantity >= 20 &&
+        <div style={menuStyle}>
+          <div style={itemStyle}>
+            <h3>{props.name}</h3>
+            <h6><strong>by {props.brand}</strong></h6>
+            <p><em>{props.flavor}</em></p>
+            <div style={itemFooterTextStyle}>
+              {props.price <= 2 &&
+              <p style={discountStyle}>${props.price}</p>
+              }
+              {props.price > 2 && props.price <= 4 &&
+              <p style={midShelfStyle}>${props.price}</p>
+              }
+              {props.price > 4 &&
+              <p style={topShelfStyle}>${props.price}</p>
+              }
+
+              <p>{props.quantity} pints available</p>
+              <p><Link to="/">Sell</Link></p>
+              <hr />
+              <Link to="/editkombuchaform">Edit</Link>
+            </div>
+          </div>
+
+        </div>
+        }
 
       </div>
     </div>

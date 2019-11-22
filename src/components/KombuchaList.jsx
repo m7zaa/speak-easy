@@ -134,14 +134,14 @@ var MasterKombuchaList = [
 ];
 
 function KombuchaList() {
-    var headerStyle = {
-        textAlign: 'center',
-        position: 'relative',
-        fontFamily: 'Century Gothic',
-        fontWeight: 'bold',
-        fontSize: '100',
-        color: 'white'
-    };
+  var headerStyle = {
+    textAlign: 'center',
+    position: 'relative',
+    fontFamily: 'Century Gothic',
+    fontWeight: 'bold',
+    fontSize: '100',
+    color: 'white'
+  };
 
   return (
     <div>
@@ -155,7 +155,7 @@ function KombuchaList() {
           quantity={kombucha.quantity}
           key={index} />
       )}
-        <Link to="/Add">Add Kombucha</Link>
+      <Link to="/Add">Add Kombucha</Link>
     </div>
   );
 }
