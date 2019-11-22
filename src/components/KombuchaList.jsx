@@ -159,6 +159,7 @@ function KombuchaList(props) {
           quantity={kombucha.quantity}
           tapKeg={props.tapKeg}
           sellPint={props.sellPint}
+          updatedKombucha={props.updatedKombucha}
           index={index} 
           key={kombucha.id} />
       )}
@@ -171,6 +172,7 @@ KombuchaList.propTypes = {
   kombuchaList: PropTypes.array,
   sellPint: PropTypes.func,
   tapKeg: PropTypes.func,
+  updatedKombucha: PropTypes.func,
   index: PropTypes.number
 };
 
