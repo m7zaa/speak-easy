@@ -155,8 +155,8 @@ function KombuchaList(props) {
           price={kombucha.price}
           flavor={kombucha.flavor}
           quantity={kombucha.quantity}
-          tapKeg={kombucha.tapKeg}
-          sellPint={kombucha.sellPint}
+          tapKeg={props.tapKeg}
+          sellPint={props.sellPint}
           index={index} 
           key={kombucha.id} />
       )}

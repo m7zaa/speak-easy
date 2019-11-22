@@ -22,24 +22,24 @@ function NewKombuchaForm(props) {
     <div>
       <form onSubmit={handleNewKombuchaFormSubmission}>
         <input
-          type='text'
+          // type='text'
           id='name'
           placeholder='Name'
           ref={(input) => { _name = input; }} />
         <input
-          type='text'
+          // type='text'
           id='brand'
           placeholder='Brand'
           ref={(input) => { _brand = input; }} />
  />
         <input
-          type='text'
+          // type='text'
           id='Price'
           placeholder='Price'
           ref={(input) => { _price = input; }} />
  />
         <input
-          type='text'
+          // type='text'
           id='flavor'
           placeholder='Flavor'
           ref={(input) => { _flavor = input; }} />
@@ -52,7 +52,7 @@ function NewKombuchaForm(props) {
   );
 }
 
-NewKombuchaForm.proptypes = {
+NewKombuchaForm.propTypes = {
   onNewKombuchaCreation: PropTypes.func
 };
 
