@@ -11,7 +11,7 @@ function NavBar() {
     fontFamily: 'Tomorrow, sans-serif',
     fontWeight: 'bold',
     borderRadius: '5px',
-    width: "100%",
+    width: '100%',
     marginBottom: '30px'
   };
 
