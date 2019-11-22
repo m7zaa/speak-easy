@@ -15,7 +15,7 @@ _This program allows employees to track, add or delete kegs._
 * _Then run $ npm run start_
 * _In browser, go to http://localhost:8080/_
 
-![Diagram](https://github.com/m7zaa/speak-easy/blob/master/speak-easy2.drawio)
+![Diagram](https://github.com/m7zaa/speak-easy/blob/master/speak-easy2.jpg)
 
 ## Known Bugs
 
