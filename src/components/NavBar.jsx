@@ -12,6 +12,7 @@ function NavBar() {
     fontWeight: 'bold',
     borderRadius: '5px',
     width: '100%',
+    height: '100px',
     marginBottom: '30px',
     color: '#ececeb'
   };
@@ -20,12 +21,17 @@ function NavBar() {
     height: '75px'
   };
 
+  var textStyle = {
+    fontSize: '30px',
+    color: '#ececeb'
+  }
+
   return (
     <nav style={navStyle}>
       <div className="nav-wrapper">
         <span><Link to="/"><img src={bottle} style={bottleStyle}/></Link></span>
         <ul id="nav-mobile" className="right">
-          <li><Link to="/Kombucha">On Tap</Link></li>
+          <li><Link style={textStyle} to="/Kombucha">On Tap</Link></li>
         </ul>
       </div>
     </nav>

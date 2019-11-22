@@ -17,7 +17,8 @@ function KombuchaList(props) {
 
   return (
     <div>
-      <h1 style={headerStyle}>Drafts</h1>
+      <h1 style={headerStyle}>Drafts         <Link to="/Add"><a className="btn-floating btn-small waves-effect waves-light red"><i className="material-icons">add</i></a></Link>
+</h1>
       <hr />
       {props.kombuchaList.map((kombucha, index) =>
         <Kombucha
@@ -32,7 +33,6 @@ function KombuchaList(props) {
           key={kombucha.id} />
       )}
       <div>
-        <Link to="/Add"><a className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></a></Link>
 
       </div>
 
