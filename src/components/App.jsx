@@ -34,7 +34,20 @@ class App extends React.Component {
     this.setState({ masterKombuchaList: newMasterKombuchaList });
   }
 
-  render(){
+  handleEditingMasterKombuchaList(newText1, newText2, newText3, newText4, i) {
+    var arr = this.state.MasterKombuchaList;
+    arr[i].name = newText1;
+    arr[i].brand = newText2;
+    arr[i].price = newText3;
+    arr[i].flavor = newText4;
+
+
+    this.setState({ MasterProduceList: arr });
+
+  }
+  
+
+  render() {
     var siteStyle = {
       backgroundColor: 'black',
     };
@@ -44,7 +57,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
 
-          <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} />} />
+          <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} updatedKombucha={this.handleEditingMasterKombuchaList}/>} />
 
 
           {/* <Route exact path="/Edit" component={EditKombuchaForm} /> */}
