@@ -8,7 +8,7 @@ import NewKombuchaForm from './NewKombuchaForm';
 // import EditKombuchaForm from './EditKombuchaForm';
 
 class App extends React.Component {
-
+ 
   constructor(props) {
     super(props);
     this.state = {
