@@ -85,6 +85,7 @@ function Kombucha(props) {
                   <p style={topShelfStyle}>${props.price}</p>
                 }
                 <p>{props.quantity} pints available</p>
+                <p><a class="waves-effect waves-light btn">button</a></p>
                 <p><button onClick={handleSellPintClick} >Sell</button> | <button onClick={handleTapKegClick} >Tap Keg</button></p>
                 <hr />
                 <Link to="/editkombuchaform">Edit</Link>
@@ -110,9 +111,10 @@ function Kombucha(props) {
                 }
 
                 <p>{props.quantity} pints available</p>
-                <p><button onClick={handleSellPintClick}>Sell</button> | <button onClick={handleTapKegClick}>Tap Keg</button></p>
+              <a onClick={handleSellPintClick} className="waves-effect waves-light btn">Sell Pint</a> <a onClick={handleTapKegClick} className="waves-effect waves-light btn">Tap Keg</a>
+
                 <hr />
-                <Link to="/editkombuchaform">Edit</Link>
+                {/* <Link to="/editkombuchaform">Edit</Link> */}
               </div>
             </div>
 

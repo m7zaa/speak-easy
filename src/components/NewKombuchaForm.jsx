@@ -18,32 +18,40 @@ function NewKombuchaForm(props) {
     _price.value = '';
     _flavor.value = '';
   }
+  var formStyle = {
+    color: 'white'
+  };
   return (
-    <div>
+    <div style={formStyle}>
       <form onSubmit={handleNewKombuchaFormSubmission}>
         <input
+          style={{ color: 'white' }}
           // type='text'
           id='name'
           placeholder='Name'
           ref={(input) => { _name = input; }} />
         <input
+          style={{ color: 'white' }}
           // type='text'
           id='brand'
           placeholder='Brand'
           ref={(input) => { _brand = input; }} />
- />
+ 
         <input
+          style={{ color: 'white' }}
           // type='text'
           id='Price'
           placeholder='Price'
           ref={(input) => { _price = input; }} />
- />
+
         <input
+          style={{ color: 'white' }}
+
           // type='text'
           id='flavor'
           placeholder='Flavor'
           ref={(input) => { _flavor = input; }} />
- />
+
 
                 
         <button type='submit'>Add Kombucha</button>
