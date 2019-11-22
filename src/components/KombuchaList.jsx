@@ -162,7 +162,12 @@ function KombuchaList(props) {
           index={index}
           key={kombucha.id} />
       )}
-      <Link to="/Add">Add Kombucha</Link>
+      <div>
+        <Link to="/Add"><a className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">add</i></a></Link>
+
+      </div>
+
+
     </div>
   );
 }

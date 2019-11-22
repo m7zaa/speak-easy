@@ -21,6 +21,9 @@ function NewKombuchaForm(props) {
   var formStyle = {
     color: 'white'
   };
+  var btnStyle = {
+    color: 'black'
+  };
   return (
     <div style={formStyle}>
       <form onSubmit={handleNewKombuchaFormSubmission}>
@@ -53,8 +56,7 @@ function NewKombuchaForm(props) {
           ref={(input) => { _flavor = input; }} />
 
 
-                
-        <button type='submit'>Add Kombucha</button>
+        <button type='submit' style={btnStyle} className="waves-effect waves-light btn-small">Add</button>    
       </form>
     </div>
   );
