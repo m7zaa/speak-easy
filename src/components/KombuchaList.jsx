@@ -135,6 +135,8 @@ import { Link } from 'react-router-dom';
 // ];
 
 function KombuchaList(props) {
+  //sorts kegs with < 15 pints to the top of the list
+  props.kombuchaList.sort((a, b) => (a.quantity - 15) ? 1 : -1);
   var headerStyle = {
     textAlign: 'center',
     position: 'relative',

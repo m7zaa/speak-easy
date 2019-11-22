@@ -1,43 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 function NavBar() {
-  var navBarWidth = {
-    // width: '100%',
-    borderRadius: '1%'
+
+  var navStyle = {
+    paddingLeft: '2%',
+    paddingRight: '2%',
+    backgroundColor: 'blue',
+    fontFamily: 'Tomorrow, sans-serif',
+    fontWeight: 'bold',
+    borderRadius: '10px'
+
   };
-  var navBar = {
-    // whiteSpace: "normal",
-    // textAlign: "center",
-    // wordBreak: "break-all",
-    margin: '0 50px 0 50px'
-  };
-  var navLink = {
-    color: 'black',
-  };
+
   return (
-    <nav style= {navBarWidth} className="navbar navbar-expand-lg navbar-light bg-white box-shadow mb-3">
-      <div className="container">
-  
-        <Link to="/">The Speak Easy</Link>
-
-                    
-        <div className="navbar-collapse collapse d-lg-inline-flex flex-lg-row">
-          <ul className="navbar-nav flex-grow-1 mr-auto">
-            <li className="nav-item">
-            
-            </li>
-            <li>
-              <span style={navBar} className="nav-link text-light" ><Link style={navLink} to="/Kombucha">Drafts</Link></span>
-
-            </li>
-          </ul>
-        </div>   
+    <nav style={navStyle}>
+      <div className="nav-wrapper">
+        <span><Link to="/"><i className="fas fa-beer fa-4x"></i></Link></span>
+        <ul id="nav-mobile" className="right">
+          <li><Link to="/Kombucha">Drafts</Link></li>
+        </ul>
       </div>
     </nav>
-     
 
   );
 }
