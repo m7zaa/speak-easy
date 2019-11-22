@@ -7,22 +7,50 @@ import Error404 from './Error404';
 import NewKombuchaForm from './NewKombuchaForm';
 import EditKombuchaForm from './EditKombuchaForm';
 
-function App() {
-  var siteStyle = {
-    backgroundColor: 'black',
-  };
-  return (
-    <div style={siteStyle} className="container">
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Kombucha" component={KombuchaList} />
-        <Route exact path="/Edit" component={EditKombuchaForm} />
-        <Route exact path="/Add" component={NewKombuchaForm} />
-        <Route component={Error404} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterKombuchaList: [],
+    };
+    this.handleAddingNewKombuchaToList = this.handleAddingNewKombuchaToList.bind(this);
+    this.handleTapKegClick = this.handleTapKegClick.bind(this);
+    this.handleSellPintClick = this.handleSellPintClick.bind(this);
+  }
+  handleTapKegClick(index) {
+    var newMasterKombuchaList = this.state.masterKumbuchaList;
+    newMasterKombuchaList[index].quantitiy = 128;
+    this.setState({ masterKombuchaList:newMasterKombuchaList });
+  }
+  handleSellPintClick(index) {
+    var newMasterKombuchaList = this.state.masterKumbuchaList;
+    newMasterKombuchaList[index].quantitiy --;
+    this.setState({ masterKombuchaList: newMasterKombuchaList });
+  }
+  handleAddingNewKombuchaToList(newKombucha) {
+    var newMasterKombuchaList = this.state.masterKumbuchaList;
+    newMasterKombuchaList.push(newKombucha);
+    this.state({ masterKombuchaList: newMasterKombuchaList});
+  }
+
+  render(){
+    var siteStyle = {
+      backgroundColor: 'black',
+    };
+    return (
+      <div style={siteStyle} className="container">
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} />} />
+          <Route exact path="/Edit" component={EditKombuchaForm} />
+          <Route exact path="/Add" render={() => <NewKombuchaForm onNewKombuchaCreation={this.handleAddingNewKombuchaToList} />} />
+          <Route component={Error404} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;

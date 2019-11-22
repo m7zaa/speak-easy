@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 // import box from '../Assets/Img/box.jpg';
 
 function Kombucha(props) {
+
+
+  function handleNewKegClick() {
+    props.tapKeg(props.index);
+  }
+
+
+
   var pageStyle = {
     display: 'inline-flex',
     alignItems: 'center',

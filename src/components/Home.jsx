@@ -20,10 +20,6 @@ function Home() {
   var titleStyle = {
     zIndex: '2',
     position: 'absolute',
-    left: '28%',
-    right: '25%',
-    top: '35%',
-    bottom: '25%',
     fontFamily: '"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans - serif',
     fontSize: '92px',
     padding: '80px 50px',
@@ -32,7 +28,10 @@ function Home() {
     textRendering: 'optimizeLegibility',
     color: '#2c2c2c',
     letterSpacing: '.05em',
-    textShadow: '4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2)'
+    textShadow: '4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2)',
+    top: '50%', 
+    left: '50%', 
+    transform: 'translate(-50%, -50%)'
   };
   return (
     <div style={siteStyle} className="container">
