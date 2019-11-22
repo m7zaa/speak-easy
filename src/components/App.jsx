@@ -8,7 +8,7 @@ import NewKombuchaForm from './NewKombuchaForm';
 // import EditKombuchaForm from './EditKombuchaForm';
 
 class App extends React.Component {
- 
+
   constructor(props) {
     super(props);
     this.state = {
@@ -21,11 +21,11 @@ class App extends React.Component {
   handleTapKegClick(index) {
     var newMasterKombuchaList = this.state.masterKombuchaList;
     newMasterKombuchaList[index].quantity = 128;
-    this.setState({ masterKombuchaList:newMasterKombuchaList });
+    this.setState({ masterKombuchaList: newMasterKombuchaList });
   }
   handleSellPintClick(index) {
     var newMasterKombuchaList = this.state.masterKombuchaList;
-    newMasterKombuchaList[index].quantity --;
+    newMasterKombuchaList[index].quantity--;
     this.setState({ masterKombuchaList: newMasterKombuchaList });
   }
   handleAddingNewKombuchaToList(newKombucha) {
@@ -33,19 +33,6 @@ class App extends React.Component {
     newMasterKombuchaList.push(newKombucha);
     this.setState({ masterKombuchaList: newMasterKombuchaList });
   }
-
-  handleEditingMasterKombuchaList(newText1, newText2, newText3, newText4, i) {
-    var arr = this.state.MasterKombuchaList;
-    arr[i].name = newText1;
-    arr[i].brand = newText2;
-    arr[i].price = newText3;
-    arr[i].flavor = newText4;
-
-
-    this.setState({ MasterProduceList: arr });
-
-  }
-  
 
   render() {
     var siteStyle = {
@@ -57,7 +44,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
 
-          <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} updatedKombucha={this.handleEditingMasterKombuchaList}/>} />
+          <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} />} />
 
 
           {/* <Route exact path="/Edit" component={EditKombuchaForm} /> */}
@@ -70,6 +57,6 @@ class App extends React.Component {
       </div>
     );
   }
-} 
+}
 
 export default App;

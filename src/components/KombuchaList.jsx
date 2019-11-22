@@ -151,7 +151,7 @@ function KombuchaList(props) {
       <h1 style={headerStyle}>Drafts</h1>
       <hr />
       {props.kombuchaList.map((kombucha, index) =>
-        <Kombucha 
+        <Kombucha
           name={kombucha.name}
           brand={kombucha.brand}
           price={kombucha.price}
@@ -159,8 +159,7 @@ function KombuchaList(props) {
           quantity={kombucha.quantity}
           tapKeg={props.tapKeg}
           sellPint={props.sellPint}
-          updatedKombucha={props.updatedKombucha}
-          index={index} 
+          index={index}
           key={kombucha.id} />
       )}
       <Link to="/Add">Add Kombucha</Link>
@@ -172,8 +171,9 @@ KombuchaList.propTypes = {
   kombuchaList: PropTypes.array,
   sellPint: PropTypes.func,
   tapKeg: PropTypes.func,
-  updatedKombucha: PropTypes.func,
   index: PropTypes.number
 };
+
+
 
 export default KombuchaList;
