@@ -6,10 +6,13 @@ import { Link } from 'react-router-dom';
 function Kombucha(props) {
 
 
-  function handleNewKegClick() {
+  function handleTapKegClick() {
     props.tapKeg(props.index);
   }
 
+  function handleSellPintClick() {
+    props.sellPint(props.index);
+  }
 
 
   var pageStyle = {
@@ -82,7 +85,7 @@ function Kombucha(props) {
               <p style={topShelfStyle}>${props.price}</p>
               }
               <p>{props.quantity} pints available</p>
-              <p><Link to="/">Sell</Link></p>
+              <p><button onClick={handleSellPintClick} >Sell</button> | <button onClick={handleTapKegClick} >Tap Keg</button></p>
               <hr />
               <Link to="/editkombuchaform">Edit</Link>
             </div>
@@ -127,6 +130,9 @@ Kombucha.propTypes = {
   price: PropTypes.number,
   flavor: PropTypes.string,
   quantity: PropTypes.number,
+  tapKeg: PropTypes.func,
+  sellPint: PropTypes.func,
+  index: PropTypes.number,
 };
 
 export default Kombucha;

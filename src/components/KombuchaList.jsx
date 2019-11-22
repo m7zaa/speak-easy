@@ -148,7 +148,7 @@ function KombuchaList(props) {
     <div>
       <h1 style={headerStyle}>Drafts</h1>
       <hr />
-      {MasterKombuchaList.map((kombucha, index) =>
+      {props.kombuchaList.map((kombucha, index) =>
         <Kombucha 
           name={kombucha.name}
           brand={kombucha.brand}
@@ -166,10 +166,10 @@ function KombuchaList(props) {
 }
 
 KombuchaList.propTypes = {
-  KombuchaList: propTypes.array,
+  kombuchaList: PropTypes.array,
   sellPint: PropTypes.func,
   tapKeg: PropTypes.func,
-  index:PropTypes.number
+  index: PropTypes.number
 };
 
 export default KombuchaList;
