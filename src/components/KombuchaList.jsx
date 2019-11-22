@@ -140,7 +140,7 @@ function KombuchaList(props) {
     position: 'relative',
     fontFamily: 'Century Gothic',
     fontWeight: 'bold',
-    fontSize: '100',
+    fontSize: '100px',
     color: 'white'
   };
 

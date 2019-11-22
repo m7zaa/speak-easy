@@ -19,13 +19,13 @@ class App extends React.Component {
     this.handleSellPintClick = this.handleSellPintClick.bind(this);
   }
   handleTapKegClick(index) {
-    var newMasterKombuchaList = this.state.masterKumbuchaList;
-    newMasterKombuchaList[index].quantitiy = 128;
+    var newMasterKombuchaList = this.state.masterKombuchaList;
+    newMasterKombuchaList[index].quantity = 128;
     this.setState({ masterKombuchaList:newMasterKombuchaList });
   }
   handleSellPintClick(index) {
-    var newMasterKombuchaList = this.state.masterKumbuchaList;
-    newMasterKombuchaList[index].quantitiy --;
+    var newMasterKombuchaList = this.state.masterKombuchaList;
+    newMasterKombuchaList[index].quantity --;
     this.setState({ masterKombuchaList: newMasterKombuchaList });
   }
   handleAddingNewKombuchaToList(newKombucha) {

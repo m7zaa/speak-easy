@@ -19,9 +19,9 @@ function Kombucha(props) {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: '40',
-    marginRight: '10',
-    marginBottom: '10'
+    marginLeft: '40px',
+    marginRight: '10px',
+    marginBottom: '10px'
 
   };
   var menuStyle = {
@@ -40,16 +40,16 @@ function Kombucha(props) {
     width: '300px',
     height: '300px',
     textAlign: 'center',
-    padding: '15',
+    padding: '15px',
     position: 'relative',
     fontFamily: 'Century Gothic',
   };
 
   var itemFooterTextStyle = {
     position: 'absolute',
-    bottom: '8',
-    left: '20',
-    right: '20'
+    bottom: '8px',
+    left: '20px',
+    right: '20px'
   };
   var discountStyle = {
     color: '#FE0000',
@@ -110,7 +110,7 @@ function Kombucha(props) {
               }
 
               <p>{props.quantity} pints available</p>
-              <p><Link to="/">Sell</Link></p>
+              <p><button onClick={handleSellPintClick}>Sell</button> | <button onClick={handleTapKegClick}>Tap Keg</button></p>
               <hr />
               <Link to="/editkombuchaform">Edit</Link>
             </div>
