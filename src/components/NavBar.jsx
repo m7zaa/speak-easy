@@ -6,14 +6,15 @@ function NavBar() {
   var navStyle = {
     paddingLeft: '2%',
     paddingRight: '2%',
-    backgroundColor: '#10316b',
+    backgroundColor: '#ececeb',
+    
     fontFamily: 'Ropa Sans, sans - serif',
     fontWeight: 'bold',
     borderRadius: '5px',
     width: '100%',
-    height: '100px',
+    height: '80',
     marginBottom: '30px',
-    color: '#ececeb'
+    color: '#10316b'
   };
 
   var bottleStyle = {
@@ -22,7 +23,7 @@ function NavBar() {
 
   var textStyle = {
     fontSize: '30px',
-    color: '#ececeb'
+    color: 'black'
   };
 
   return (

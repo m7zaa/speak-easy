@@ -20,15 +20,13 @@ function Kombucha(props) {
   };
   var menuStyle = {
     // margin: '5 5 5 5',
-    backgroundColor: '#e25822',
-    color: '#ececeb',
+    backgroundColor: '#ececeb',
+    color: '#e25822',
     borderStyle: 'solid',
     borderWidth: '2px'
   };
   var almostOutStyle = {
-    borderStyle: 'solid',
-    borderColor: 'red',
-    borderWidth: '10px',
+    backgroundColor: '#e25822',
     color: 'black'
   };
   var itemStyle = {
@@ -46,22 +44,21 @@ function Kombucha(props) {
     right: '20px'
   };
   var discountStyle = {
-    color: '#FE0000',
-    
+    color: 'black',
     fontWeight: 'bold'
   };
   var midShelfStyle = {
-    color: '#E5D2D2',
+    color: 'black',
     fontWeight: 'bold'
   };
   var topShelfStyle = {
-    color: 'gold',
+    color: '#10316b',
     fontWeight: 'bold'
   };
   var btnStyle = {
     backgroundColor: '#10316b',
     color: '#ececeb'
-  };
+  }
 
   return (
     <div style={pageStyle}>
@@ -83,7 +80,7 @@ function Kombucha(props) {
                   <p style={topShelfStyle}>${props.price}</p>
                 }
                 <p>{props.quantity} pints available</p>
-                <a onClick={handleSellPintClick} style={btnStyle} className="waves-effect btn-small">Sell Pint</a> <a onClick={handleTapKegClick} style={btnStyle} className="waves-effect btn-small">New Keg</a>                
+              <a onClick={handleSellPintClick} style={btnStyle} className="waves-effect btn-small">Sell Pint</a> <a onClick={handleTapKegClick} style={btnStyle} className="waves-effect btn-small">New Keg</a>                
                 {/* <Link to="/editkombuchaform">Edit</Link> */}
               </div>
             </div>
@@ -106,7 +103,7 @@ function Kombucha(props) {
                   <p style={topShelfStyle}>${props.price}</p>
                 }
                 <p>{props.quantity} pints available</p>
-                <a onClick={handleSellPintClick} style={btnStyle} className="waves-effect btn-small">Sell Pint</a> <a onClick={handleTapKegClick} style={btnStyle} className="waves-effect btn-small">New Keg</a>
+              <a onClick={handleSellPintClick} style={btnStyle} className="waves-effect btn-small">Sell Pint</a> <a onClick={handleTapKegClick} style={btnStyle} className="waves-effect btn-small">New Keg</a>
               </div>
             </div>
           </div>
