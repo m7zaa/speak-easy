@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import bottle from '../Assets/Img/bottle.png';
 
 function NavBar() {
-
   var navStyle = {
     paddingLeft: '2%',
     paddingRight: '2%',
     backgroundColor: '#10316b',
-    fontFamily: 'Tomorrow, sans-serif',
+    fontFamily: 'Ropa Sans, sans - serif',
     fontWeight: 'bold',
     borderRadius: '5px',
     width: '100%',
@@ -24,7 +23,7 @@ function NavBar() {
   var textStyle = {
     fontSize: '30px',
     color: '#ececeb'
-  }
+  };
 
   return (
     <nav style={navStyle}>
@@ -35,7 +34,6 @@ function NavBar() {
         </ul>
       </div>
     </nav>
-
   );
 }
 export default NavBar;

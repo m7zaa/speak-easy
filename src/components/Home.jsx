@@ -1,8 +1,5 @@
 import React from 'react';
 import background from '../Assets/Img/home-background.jpeg';
-import { Link } from 'react-router-dom';
-
-
 
 function Home() {
   var siteStyle = {
@@ -10,13 +7,10 @@ function Home() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-   
   };
-
   var imgStyle = {
     zIndex: '1',
   };
-
   var titleStyle = {
     zIndex: '2',
     fontFamily: '"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans - serif',
@@ -38,5 +32,4 @@ function Home() {
     </div>
   );
 }
-
 export default Home;

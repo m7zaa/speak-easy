@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function KombuchaList(props) {
   //sorts kegs with < 15 pints to the top of the list
-  props.kombuchaList.sort((a, b) => (a.quantity - 15) ? 1 : -1);
+  props.kombuchaList.sort((a) => (a.quantity - 20) ? 1 : -1);
   var headerStyle = {
     textAlign: 'center',
     position: 'relative',
@@ -18,7 +18,7 @@ function KombuchaList(props) {
   return (
     <div>
       <h1 style={headerStyle}>Drafts         <Link to="/Add"><a className="btn-floating btn-small waves-effect waves-light red"><i className="material-icons">add</i></a></Link>
-</h1>
+      </h1>
       <hr />
       {props.kombuchaList.map((kombucha, index) =>
         <Kombucha
@@ -33,21 +33,15 @@ function KombuchaList(props) {
           key={kombucha.id} />
       )}
       <div>
-
       </div>
-
-
     </div>
   );
 }
-
 KombuchaList.propTypes = {
   kombuchaList: PropTypes.array,
   sellPint: PropTypes.func,
   tapKeg: PropTypes.func,
   index: PropTypes.number
 };
-
-
 
 export default KombuchaList;

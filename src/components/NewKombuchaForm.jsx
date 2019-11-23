@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
-
 function NewKombuchaForm(props) {
   let _name = null;
   let _brand = null;
@@ -30,33 +29,24 @@ function NewKombuchaForm(props) {
       <form onSubmit={handleNewKombuchaFormSubmission}>
         <input
           style={{ color: '#ececeb' }}
-          // type='text'
           id='name'
           placeholder='Name'
           ref={(input) => { _name = input; }} />
         <input
           style={{ color: '#ececeb' }}
-          // type='text'
           id='brand'
           placeholder='Brand'
           ref={(input) => { _brand = input; }} />
- 
         <input
           style={{ color: '#ececeb' }}
-          // type='text'
           id='Price'
           placeholder='Price'
           ref={(input) => { _price = input; }} />
-
         <input
           style={{ color: '#ececeb' }}
-
-          // type='text'
           id='flavor'
           placeholder='Flavor'
           ref={(input) => { _flavor = input; }} />
-
-
         <button type='submit' style={btnStyle} className="waves-effect  btn-small">Add</button>    
       </form>
     </div>
@@ -66,6 +56,5 @@ function NewKombuchaForm(props) {
 NewKombuchaForm.propTypes = {
   onNewKombuchaCreation: PropTypes.func
 };
-
 
 export default NewKombuchaForm;

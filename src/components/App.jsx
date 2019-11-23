@@ -5,7 +5,6 @@ import Home from './Home';
 import NavBar from './NavBar';
 import Error404 from './Error404';
 import NewKombuchaForm from './NewKombuchaForm';
-// import EditKombuchaForm from './EditKombuchaForm';
 
 class App extends React.Component {
 
@@ -43,20 +42,12 @@ class App extends React.Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-
           <Route exact path="/Kombucha" render={() => <KombuchaList kombuchaList={this.state.masterKombuchaList} tapKeg={this.handleTapKegClick} sellPint={this.handleSellPintClick} />} />
-
-
-          {/* <Route exact path="/Edit" component={EditKombuchaForm} /> */}
-
           <Route exact path="/Add" render={() => <NewKombuchaForm onNewKombuchaCreation={this.handleAddingNewKombuchaToList} />} />
-
-
           <Route component={Error404} />
         </Switch>
       </div>
     );
   }
 }
-
 export default App;
